@@ -1,0 +1,50 @@
+<html>
+<head>
+  <style>
+    td {
+      text-align: center;
+      border: 1px solid black;
+      width:30px;
+      height:30px;
+    }
+    .corner {
+      background-color: black;
+    }
+    td.value {
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    Sort the grey numbers by sliding them around on the toroidal surface. <br />
+    When a number goes off an edge, it comes back around on the other edge. <br />
+    The colored pieces show you where your number will come in. <br />
+    <br />
+    When you win, the puzzle will be reshuffled. Each level reshuffles a little more.
+  </span>
+
+  <p>
+
+  </p>
+  </div>
+  <div id="gameArea">
+    Level:<span id="level">1</span>
+  </div>
+  <table>
+    <tr>
+      <td><pre>w a s d</pre></td><td><pre>slide the grey numbers a direction</pre></td>
+    </tr>
+    <tr>
+      <td><pre>arrows</pre></td><td><pre>change the toroidal mapping</pre></td>
+    </tr>
+    <tr>
+      <td><pre>to win</pre></td><td><pre>Order the number with 0 in top left</pre></td>
+    </tr>
+  </table>
+  <script src="table.js"></script>
+  <script src="game.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
