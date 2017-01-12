@@ -124,7 +124,7 @@ class Game {
     for (let r = 1; r < this.rows; r++) {
       this.setRowSlice(r - 1, this.getRowSlice(r));
     }
-    slice = this.rotateSlice(slice, this.bottomMap, this.topMap);
+    slice = this.rotateSlice(slice, this.topMap, this.bottomMap);
     this.setRowSlice(this.rows - 1, slice);
   }
   rotateUp() { this.rightMap.push(this.rightMap.shift()); }
