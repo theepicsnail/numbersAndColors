@@ -1,5 +1,7 @@
+let hash = (location.hash.substring(1) || "3x4").split("x");
+let rows = parseInt(hash[0]), cols = parseInt(hash[1]);
 
-let g = new Game(document.getElementById("gameArea"), 3, 4);
+let g = new Game(document.getElementById("gameArea"), rows, cols);
 let level = 0;
 document.onkeydown = (evt) => {
   switch (evt.code) {
