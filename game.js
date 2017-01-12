@@ -146,7 +146,7 @@ class Game {
       n -= 1;
       if (n <= 0)
         clearInterval(interval);
-    }, 100);
+    }, 1000 / Math.sqrt(n));
   }
 
   checkWin() {
