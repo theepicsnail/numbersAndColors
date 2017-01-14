@@ -2,7 +2,6 @@ let hash = (location.hash.substring(1) || "3x4").split("x");
 let rows = parseInt(hash[0]), cols = parseInt(hash[1]);
 
 let g = new Game(document.getElementById("gameArea"), rows, cols);
-let level = 0;
 document.onkeydown = (evt) => {
   switch (evt.code) {
   case "KeyA":
@@ -33,8 +32,9 @@ document.onkeydown = (evt) => {
   console.log("--");
   g.redraw();
   if (g.checkWin()) {
-    g.shuffle(++level);
-    document.querySelector("#level").innerText = level;
+    document.querySelector("#output").innerText = "Winning state! Click shuffle and try another";
+  } else {
+    document.querySelector("#output").innerText = "";
   }
 };
-g.redraw();
+document.onkeydown({})
